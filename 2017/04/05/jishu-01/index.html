@@ -6,21 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.majunsong.com">
-  <title>当const与指针相遇 | 马俊松的个人网站</title>
+  <title>C++中的const小结 | 马俊松的个人网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##介绍四种指针以及具体区别
-##使用例子及作用">
+  <meta name="description" content="在C++中，常用const来代替#define定义常量，但其应用并不仅仅局限于此。这里将总结一下C++中const的其它几种使用情况，以及其作用和原理。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="当const与指针相遇">
-<meta property="og:url" content="http://www.majunsong.com/2017/02/23/jishu-01/index.html">
+<meta property="og:title" content="C++中的const小结">
+<meta property="og:url" content="http://www.majunsong.com/2017/04/05/jishu-01/index.html">
 <meta property="og:site_name" content="马俊松的个人网站">
-<meta property="og:description" content="##介绍四种指针以及具体区别
-##使用例子及作用">
-<meta property="og:updated_time" content="2017-02-23T09:09:24.287Z">
+<meta property="og:description" content="在C++中，常用const来代替#define定义常量，但其应用并不仅仅局限于此。这里将总结一下C++中const的其它几种使用情况，以及其作用和原理。">
+<meta property="og:updated_time" content="2017-06-05T19:02:52.173Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="当const与指针相遇">
-<meta name="twitter:description" content="##介绍四种指针以及具体区别
-##使用例子及作用">
+<meta name="twitter:title" content="C++中的const小结">
+<meta name="twitter:description" content="在C++中，常用const来代替#define定义常量，但其应用并不仅仅局限于此。这里将总结一下C++中const的其它几种使用情况，以及其作用和原理。">
   
     <link rel="alternative" href="/atom.xml" title="马俊松的个人网站" type="application/atom+xml">
   
@@ -87,8 +84,6 @@
 				
 					<a class="github" target="_blank" href="https://github.com/majunsong1" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="douban" target="_blank" href="https://www.douban.com/people/159563583/" title="douban"><i class="icon-douban"></i></a>
-		        
 			</div>
 		</nav>
 	</header>		
@@ -126,8 +121,6 @@
 					
 						<a class="github" target="_blank" href="https://github.com/majunsong1" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="douban" target="_blank" href="https://www.douban.com/people/159563583/" title="douban"><i class="icon-douban"></i></a>
-			        
 				</div>
 			</nav>
 
@@ -159,22 +152,23 @@
         
   
     <h1 class="article-title" itemprop="name">
-      当const与指针相遇
+      C++中的const小结
     </h1>
   
 
         
-        <a href="/2017/02/23/jishu-01/" class="archive-article-date">
-  	<time datetime="2017-02-23T08:29:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-23</time>
+        <a href="/2017/04/05/jishu-01/" class="archive-article-date">
+  	<time datetime="2017-04-05T08:29:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##介绍四种指针以及具体区别</p>
-<p>##使用例子及作用</p>
-
+        <p>在C++中，常用const来代替#define定义常量，但其应用并不仅仅局限于此。这里将总结一下C++中const的其它几种使用情况，以及其作用和原理。<br><a id="more"></a></p>
+<h3 id="const和指针"><a href="#const和指针" class="headerlink" title="const和指针"></a>const和指针</h3><h4 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h4><p>  C++中的指针与C中的概念相同（即一特殊变量，用于存放所指向变量的地址），需注意的是在C++中常用“引用”来简化指针操作。</p>
+<h4 id="指向常量的指针"><a href="#指向常量的指针" class="headerlink" title="指向常量的指针"></a>指向常量的指针</h4><p>  const char *p=s;在</p>
+<h4 id="常指针"><a href="#常指针" class="headerlink" title="常指针"></a>常指针</h4><h4 id="指向常量的常指针"><a href="#指向常量的常指针" class="headerlink" title="指向常量的常指针"></a>指向常量的常指针</h4><h3 id="const和函数"><a href="#const和函数" class="headerlink" title="const和函数"></a>const和函数</h3><h4 id="const修饰函数返回值"><a href="#const修饰函数返回值" class="headerlink" title="const修饰函数返回值"></a>const修饰函数返回值</h4><h4 id="常函数"><a href="#常函数" class="headerlink" title="常函数"></a>常函数</h4><h3 id="const和拷贝构造函数"><a href="#const和拷贝构造函数" class="headerlink" title="const和拷贝构造函数"></a>const和拷贝构造函数</h3>
       
 
       
@@ -269,7 +263,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.majunsong.com/2017/02/23/jishu-01/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.majunsong.com/2017/04/05/jishu-01/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,18 +277,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/08/sui 3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/06/jishu-02/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          一段对时间的告白
+          新手在Android开发中的各种坑
         
       </div>
     </a>
   
   
-    <a href="/2017/02/19/sui 1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">当孤独与叛逆相遇——《这个杀手不太冷》观后感</div>
+    <a href="/2017/03/08/sui 3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一段对时间的告白</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -307,7 +301,7 @@
 
   
   <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2017/02/23/jishu-01/" data-title="当const与指针相遇" data-url="http://majunsong1.github.io/http://www.majunsong.com/2017/02/23/jishu-01/"></div>
+	<div class="ds-thread" data-thread-key="2017/04/05/jishu-01/" data-title="C++中的const小结" data-url="http://majunsong1.github.io/http://www.majunsong.com/2017/04/05/jishu-01/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -435,6 +429,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">技术 C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技术 Android开发</a>
               </li>
              
               <li class="article-tag-list-item">
